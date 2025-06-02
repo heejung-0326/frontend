@@ -1,13 +1,13 @@
-import React, {useState, useEffec, useContext, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import {AlertContext} from '../AlertContext';
+import { AlertContext } from '../AlertContext';
 
 function Books(props) {
   //1. 상태 변수 선언
   const [data, setData] = useState([]);
-  const navigate = useNavigate();
   const {setBooksCount} = useContext(AlertContext);
+  const navigate = useNavigate();
 
   //페이지 번호 저장을 위한 상태 변수 선언
     const [currentPage, setCurrentPage] = useState(1); //초기값
@@ -42,10 +42,10 @@ function Books(props) {
     //DB에서 json데이터를 불러온다.
     .get('http://localhost:9070/books')
     //성공시 데이터를 변수에 저장
-    .then(res=>{
-      setData(res.data)
-      setBooksCount(res.data.length);
-    })
+    .then(res => {
+        setData(res.data);
+        setBooksCount(res.data.length);
+      })
     //실패시 에러 출력
     .catch(err=>console.log(err))
   }

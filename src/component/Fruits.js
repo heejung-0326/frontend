@@ -9,6 +9,7 @@ function Fruits(props) {
     const navigate = useNavigate();
     const {setFruitsCount} = useContext(AlertContext);
 
+
   //페이지 번호 저장을 위한 상태 변수 선언
   const [currentPage, setCurrentPage] = useState(1); //초기값
   const itemsPerPage = 5; //한 페이지에 보여지는 게시물 개수
@@ -40,11 +41,10 @@ function Fruits(props) {
     const loadData = () => {
       axios
         .get('http://localhost:9070/fruits')
-        .then(res=>{
+        .then(res => {
           setData(res.data);
           setFruitsCount(res.data.length);
         })
-
         .catch(err => console.log(err));
     }
 

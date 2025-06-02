@@ -21,7 +21,6 @@ import React from 'react';
 function AppContent() {
   const { questionCount, goodsCount, booksCount, fruitsCount} = React.useContext(AlertContext);
 
-
   return (
     <BrowserRouter>
       <header>
@@ -31,71 +30,65 @@ function AppContent() {
             <li><Link to='/'>Home</Link></li>
             <li>
               <Link to='/goods'>
-              goods
-                {
+                Goods{
                   goodsCount>0 &&(
                     <span style={{
-                      display: 'inline-block',
-                      marginLeft: 6,
-                      background: 'red',
-                      color: 'white',
-                      borderRadius: '50%',
-                      width: 22,
-                      height: 22,
-                      fontSize: 14,
-                      textAlign: 'center',
-                      lineHeight: '22px',
-                      fontWeight: 'bold'
+                      display:'inline-block',
+                      marginLeft:6,
+                      background:'red',
+                      color:'white',
+                      borderRadius:'50%',
+                      width:'22px',
+                      height:'22px',
+                      fontSize:'14px',
+                      textAlign:'center',
+                      lineHeight:'22px',
+                      fontWeight:'bold'
                     }}>
-                    {goodsCount}
+                      {goodsCount}
                     </span>
-                  )
-                }
+                  )}
               </Link>
             </li>
-            <li><Link to='/books'>
-            Books{
-              booksCount>0 && (
-                <span style={{
-                  display: 'inline-block',
-                  marginLeft: 6,
-                  background: 'red',
-                  color: 'white',
-                  borderRadius: '50%',
-                  width: 22,
-                  height: 22,
-                  fontSize: 14,
-                  textAlign: 'center',
-                  lineHeight: '22px',
-                  fontWeight: 'bold'
-                }}>
-                  {booksCount}
-                </span>
-              )
-            }
-            </Link>
-            </li>
+            <li><Link to='/books'>Books{
+              booksCount>0 &&(
+                    <span style={{
+                      display:'inline-block',
+                      marginLeft:6,
+                      background:'red',
+                      color:'white',
+                      borderRadius:'50%',
+                      width:'22px',
+                      height:'22px',
+                      fontSize:'14px',
+                      textAlign:'center',
+                      lineHeight:'22px',
+                      fontWeight:'bold'
+                    }}>
+                      {booksCount}
+                    </span>
+                  )}
+                </Link></li>
             <li>
               <Link to='/fruits'>
-              Fruits{
-              fruitsCount>0 && (
+              Fruits
+              {fruitsCount>0 &&(
                 <span style={{
-                  display: 'inline-block',
-                  marginLeft: 6,
-                  background: 'red',
-                  color: 'white',
-                  borderRadius: '50%',
-                  width: 22,
-                  height: 22,
-                  fontSize: 14,
-                  textAlign: 'center',
-                  lineHeight: '22px',
-                  fontWeight: 'bold'
+                  display:'inline-block',
+                  marginLeft:6,
+                  background:'red',
+                  color:'white',
+                  borderRadius:'50%',
+                  width:'22px',
+                  height:'22px',
+                  fontSize:'14px',
+                  textAlign:'center',
+                  lineHeight:'22px',
+                  fontWeight:'bold'
                 }}>
                   {fruitsCount}
                 </span>
-              )
-            }
+              )}
               </Link>
             </li>
             <li>
@@ -142,8 +135,8 @@ function AppContent() {
           <Route path='/fruits/create' element={<FruitsCreate />} />
           <Route path='/question/' element={<Question />} />
           <Route path='/login/' element={<Login />} />
-          <Route path='/login2/' element={<Login2 />} />
           <Route path='/register/' element={<Register />} />
+          <Route path='/login2/' element={<Login2 />} />
           <Route path='/register2/' element={<Register2 />} />
         </Routes>
       </main>

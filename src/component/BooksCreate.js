@@ -19,7 +19,7 @@ export default function BooksCreate() {
     const { name, value } = e.target;
     setForm((prev) => ({
       ...prev,
-      [name]: name === 'BOOK_CNT' ? Number(value) : value
+      [name]: name === 'book_cnt' ? Number(value) : value
     }));
   };
 

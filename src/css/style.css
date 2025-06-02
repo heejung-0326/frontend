@@ -92,7 +92,7 @@ a{color:#333;text-decoration:none;}
 /* 로그인 폼 서식 */
 .login-container {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 .login-container label{
   display:none;
@@ -101,32 +101,27 @@ a{color:#333;text-decoration:none;}
   display: block;
   margin: 10px auto;
   padding: 10px;
-  width: 240px;
+  width: 280px;
   border: 1px solid #ccc;
 }
 
 .login-button {
-  width:260px;
+  width:300px;
   padding: 10px 20px;
-  background-color: rgb(232, 144, 36);
-  color: #fff;
+  background-color: rgb(168, 129, 0);
+  color: white;
   border: none;
   margin-top: 10px;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
 }
-
-.login-btn{
-  width: 260px;
+.login-button2{
+  width:300px;
   padding: 10px 20px;
-  background-color: #57C785;
+  background-color: rgb(94, 112, 218);
+  color: white;
   border: none;
-  color: #fff;
-  margin: 15px 0px;
+  margin-top: 10px;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
 }
 .btn-group{padding-top:16px}
 .btn-group a{
@@ -137,14 +132,9 @@ a{color:#333;text-decoration:none;}
   margin-top: 20px;
   font-weight: bold;
 }
-
-.join-btn,.reset-btn{width: 120px; border: none; padding: 10px 0px; cursor: pointer; font-weight: bold; margin-top: 20px;}
-.join-btn{margin-right: 10px; background-color: #c17bed; color: #fff; }
-.reset-btn{ background-color: #333; color: #fff; }
-
-.easy{display: flex; justify-content: center; margin: 30px 0px;}
-.easy>li{margin-right: 10px;}
-.easy>li>img{width: 130px; height: 40px;}
+.title3{font-size:17px;font-weight:normal;padding-bottom:10px;}
+.login_btn img{width:300px;}
+.explanation{text-align:left;}
 
 .success {
   color: green;

@@ -26,6 +26,7 @@ const FruitsCreate=()=> {
   const handleSubmit = (e) => {
     e.preventDefault();//새로고침 방지
 
+    //택배를 포장하여 편의점에 맡긴다.
     axios.post('http://localhost:9070/fruits', form) //서버측에 form데이터 전송
     //전송 성공시 실행할 내용
     .then(()=>{
@@ -41,8 +42,9 @@ const FruitsCreate=()=> {
       <h3>상품등록</h3>
       <form onSubmit={handleSubmit}>
         <p>
-          <label>상품명 : </label>
-          <input 
+          <label for="name">상품명(name)</label> : 
+          <input type="text" 
+            id="name" 
             name="name" 
             value={form.name}
             onChange={handleChange}
@@ -50,8 +52,9 @@ const FruitsCreate=()=> {
           />
         </p>
         <p>
-          <label>가격 : </label>
-          <input
+          <label for="price">가격(price)</label> : 
+          <input type="text" 
+            id="price"
             name="price"
             value={form.price}
             onChange={handleChange}
@@ -59,8 +62,9 @@ const FruitsCreate=()=> {
           />
         </p>
         <p>
-          <label>색상 : </label>
-          <input
+          <label for="color">컬러(color)</label> : 
+          <input type="text" 
+            id="color"
             name="color"
             value={form.color}
             onChange={handleChange}
@@ -68,7 +72,7 @@ const FruitsCreate=()=> {
           />
         </p>
         <p>
-          <label>원산지 : </label>
+          <label for="country">원산지 : </label>
           <select
             id="country" name="country"
             value={form.country}

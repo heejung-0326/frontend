@@ -13,7 +13,7 @@ export function AlertProvider({ children }) {
       questionCount, setQuestionCount,
       goodsCount, setGoodsCount,
       booksCount, setBooksCount,
-      fruitsCount, setFruitsCount
+      fruitsCount,setFruitsCount
     }}>
       {children}
     </AlertContext.Provider>
