@@ -25,7 +25,7 @@ const Question=()=> {
   const handleSubmit = async e => {
     e.preventDefault();
     try{ //데이터 전송 성공시
-      await axios.post('http://localhost:9070/question', formData);
+      await axios.post('backend/question', formData);
       alert('질문이 등록되었습니다.');
 
       //데이터 보내고 나면 변수값 초기화
