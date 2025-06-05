@@ -25,7 +25,7 @@ export default function BooksCreate() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('backend/books', form)
+    axios.post('https://port-0-backend-mbeeoks1e1ce5c07.sel4.cloudtype.app/books', form)
       .then(() => {
         alert('상품이 등록 완료되었습니다.');
         navigate('/books');
