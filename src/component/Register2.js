@@ -26,7 +26,7 @@ const Register2 = () => {
         </p>
 
         <p>
-          <label htmlFor="email">이메일주소</label>
+          <label htmlFor="email">이메일 주소</label>
           <input type="email" name="email" id="email" placeholder="id@naver.com" />
         </p>
 
