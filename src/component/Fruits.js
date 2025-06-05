@@ -40,7 +40,7 @@ function Fruits(props) {
     //컴포넌트가 처음 렌더링될 때 useEffect에 의해 실행되어 데이터를 불러오고, 불러온 데이터를 state에 저장함. 이후 데이터가 로드되면 화면에 출력함.
     const loadData = () => {
       axios
-        .get('http://localhost:9070/fruits')
+        .get('backend/fruits')
         .then(res => {
           setData(res.data);
           setFruitsCount(res.data.length);
@@ -58,7 +58,7 @@ function Fruits(props) {
     const deleteData = (num) => {
       if(window.confirm('정말 삭제하시겠습니까?')){
         axios
-        .delete(`http://localhost:9070/fruits/${num}`)
+        .delete(`backend/fruits/${num}`)
         .then(()=>{
           alert('삭제가 완료 되었습니다.');
           loadData(); //데이터 삭제 후 목록을 다시 갱신해야 한다.
