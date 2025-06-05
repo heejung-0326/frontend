@@ -31,7 +31,7 @@ function Register() {
     }
 
     try{ //DB서버와 통신이 잘되면 POST방식으로 ID, PW를 넘긴다
-      await axios.post('backend/register',{
+      await axios.post('https://port-0-backend-mbeeoks1e1ce5c07.sel4.cloudtype.app/register',{
         username:form.username,
         password:form.password
       });
