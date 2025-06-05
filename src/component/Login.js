@@ -21,7 +21,7 @@ const Login=()=> {
     e.preventDefault();
     //console.log(form.username, form.password)
     try{ //성공시 실행내용
-      const res = await axios.post('http://localhost:9070/login', form);
+      const res = await axios.post('backend/login', form);
 
       //사용자 인증이 끝나면 '토큰'을 발급한다.
       localStorage.setItem('token', res.data.token);
