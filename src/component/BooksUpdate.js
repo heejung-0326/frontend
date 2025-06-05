@@ -20,7 +20,7 @@ function BooksUpdate(props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:9070/books/${num}`)
+    axios.get(`backend/books/${num}`)
       .then(res => {
         console.log('서버 응답값 :', res.data);
         const book = Array.isArray(res.data)
@@ -65,7 +65,7 @@ function BooksUpdate(props) {
 
       delete payload.book_cnt; // 필요 시 원래 필드 제거
       
-      axios.put(`http://localhost:9070/books/update/${num}`, payload)
+      axios.put(`backend/books/update/${num}`, payload)
       .then(() => {
         //console.log('수정 응답:', res);
         alert('상품정보가 수정 완료 되었습니다.');
